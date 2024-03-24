@@ -1,0 +1,57 @@
+# Begin Force HTTPS
+
+<IfModule mod_rewrite.c>
+
+RewriteEngine On
+
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+
+RewriteCond %{HTTPS} !on
+
+RewriteRule ^(.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+</IfModule>
+
+# End Force HTTPS
+
+
+
+# Le serveur doit suivre des liens symboliques
+
+Options +FollowSymlinks
+
+
+
+# Activation du module de réécriture d'url
+
+RewriteEngine on
+
+# Déréférencer tous les fichiers de google
+
+<Files ~ "\.(png|jpe?g|gif|pdf)$">
+
+Header set X-Robots-Tag "noindex"
+
+</Files>
+
+
+
+# ------------------------------------
+
+# Règle de réécriture des url
+
+# ------------------------------------
+
+
+
+
+
+RewriteRule ^CV-video-espanol$ /assets/videos/CV_video_es.mp4 [L]
+RewriteRule ^CV$ assets/pdf/CV_2022_en.pdf [L]
+RewriteRule ^CV-en$ assets/pdf/CV_2022_en.pdf [L]
+RewriteRule ^CV-fr$ assets/pdf/CV_2022_fr.pdf [L]
+RewriteRule ^PPP$ assets/pdf/PPP.pdf [L]
+
+
+
+Options -Indexes
