@@ -26,7 +26,9 @@ new svgMap({
         ES: { visited: true},
         PT: { visited: true},
         HR: { visited: true},
-        EC: { visited: true}
+        EC: { visited: true},
+        NZ: { visited: true},
+        AU: { visited: true}
         
         // ...
       }
