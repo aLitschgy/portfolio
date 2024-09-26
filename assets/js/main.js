@@ -1,3 +1,13 @@
+/* ======= Year Calculation =======*/
+document.getElementById("year").textContent =
+  new Date().getFullYear() -
+  2001 -
+  (new Date() < new Date(new Date().getFullYear(), 4, 27) ? 1 : 0);
+
+document.getElementById("years-dev").textContent = `${
+  new Date().getFullYear() - 2014
+}+`;
+
 /* ======================= MENU SHOW Y HIDDEN ======================= */
 const navMenu = document.getElementById("nav-menu"),
   navToggle = document.getElementById("nav-toggle"),
