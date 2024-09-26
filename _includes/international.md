@@ -1,0 +1,3 @@
+During my years at ENSEEIHT, I spent 16 weeks abroad. I first went to Ecuador for a 4-week humanitarian trip with a group of people from ENSEEIHT (see my 1st year Internship report in the Portfolio section). I also took advantage of my gap year, between my second and third academic years, to spend 3 months in Oceania. I applied for a Working Holiday Visa in New Zealand, where I worked, mainly wwoofing on farms. I met a lot of people, both New Zealanders and non-New Zealanders. To finish this experience abroad, I spent two weeks in Australia to discover the cities of the South-East of the Island.
+
+These experiences abroad gave me an enormous amount, not only on a personal level, but also in terms of my foreign language skills.

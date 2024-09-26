@@ -1,3 +1,7 @@
+---
+# front matter tells Jekyll to process Liquid
+---
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -146,10 +150,7 @@
             <div class="home__data">
               <h1 class="home__title">Antonin Litschgy</h1>
               <h3 class="home__subtitle">ENSEEIHT student</h3>
-              <p class="home__description">
-                Welcome to my personal, fully hand-coded website. Here you will
-                find everything you want to know about me.
-              </p>
+              <p class="home__description">{% include me.md%}</p>
               <!-- <a href="#contact" class="button button--flex">
                 Contact me<i class="uil uil-message button__icon"></i>
               </a> -->
@@ -174,16 +175,11 @@
         <div class="about__container container grid">
           <img src="assets/img/about.jpg" alt="" class="about__img" />
           <div class="about__data">
-            <p class="about__description">
-              Being passionate about computer science and web development, I
-              decided to join an engineering school specializing in computer
-              science after a "prépa". I am also a lifeguard and camp leader to
-              occupy my vacations.
-            </p>
+            <p class="about__description">{% include about.md%}</p>
 
             <div class="about__info">
               <div>
-                <span class="about__info-title">22</span>
+                <span class="about__info-title" id="year"></span>
                 <span class="about__info-name"
                   >Years <br />
                   Old</span
@@ -191,7 +187,7 @@
               </div>
 
               <div>
-                <span class="about__info-title">08+</span>
+                <span class="about__info-title" id="years-dev"></span>
                 <span class="about__info-name"
                   >Years <br />
                   Web Development
@@ -661,16 +657,7 @@
                 <ul class="modules__modal-modules grid">
                   <li class="modules__modal-module">
                     <i class="uil uil-check-circle modules__modal-icon"></i>
-                    <p>
-                      In early 2023, we set ourselves the goal of developing the
-                      ENSEEIHT student application. Thus was born "Churros", a
-                      kind of social network developed by a team of 10 people in
-                      Svelte, Typescript and PLpgSQL. Development began in the
-                      summer of 2023, with the aim of having the application up
-                      and running by September. I'm still part of the ongoing
-                      development team for this application, which is updated on
-                      a regular basis.
-                    </p>
+                    <p>{% include churros.md%}</p>
                     <img src="assets/img/churros.png" alt="l'appli churros" />
                   </li>
                 </ul>
@@ -786,7 +773,7 @@
               <i class="uil uil-brackets-curly modules__icon"></i>
               <h3 class="modules__title">
                 Developer for <br />
-                RAID INA-INP
+                RAID INSA-INP
               </h3>
             </div>
 
@@ -1062,52 +1049,6 @@
               </div>
             </div>
           </div>
-          <!-- ===== Creathlon ===== -->
-          <div class="modules__content">
-            <div>
-              <i class="uil uil-lightbulb modules__icon"></i>
-              <h3 class="modules__title">Creathlon Day</h3>
-            </div>
-
-            <span
-              class="button button--flex button--small button--link modules__button"
-            >
-              View More
-              <i class="uil uil-arrow-right button__icon"></i>
-            </span>
-            <div class="modules__modal">
-              <div class="modules__modal-content">
-                <h4 class="modules__modal-title">Creathlon day</h4>
-                <i class="uil uil-times modules__modal-close"></i>
-
-                <ul class="modules__modal-modules grid">
-                  <li class="modules__modal-module">
-                    <i class="uil uil-check-circle modules__modal-icon"></i>
-                    <h4>&nbsp;Drinking reminder</h4>
-                    <p>
-                      During the creathlon day, me and my team had the idea of
-                      ​​creating a machine that automatically serves water for
-                      people who need it. For example the elderly or sick
-                      people. We were supported by professionals who had often
-                      created their own business. It was interesting to see the
-                      genesis of a project while having the point of view of
-                      people who have lived it for real. We didn't win the prize
-                      for the best creation but I also enjoyed seeing the ideas
-                      that the other groups had and the strengths and weaknesses
-                      of each creation. This first day of discovery of
-                      entrepreneurship allowed us to open our minds to new
-                      possibilities after graduation.
-                    </p>
-                    <img
-                      src="assets/img/wateromatic.png"
-                      alt=""
-                      class="modules__img"
-                    />
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -1223,21 +1164,7 @@
         <h2 class="section__title">International</h2>
         <span class="section__subtitle">ENSEEIHT Mobility</span>
         <div class="international__container container">
-          <p class="international__paragraph">
-            During my years at ENSEEIHT, I spent 16 weeks abroad. I first went
-            to Ecuador for a 4-week humanitarian trip with a group of people
-            from ENSEEIHT (see my 1st year Internship report in the Portfolio
-            section). I also took advantage of my gap year, between my second
-            and third academic years, to spend 3 months in Oceania. I applied
-            for a Working Holiday Visa in New Zealand, where I worked, mainly
-            wwoofing on farms. I met a lot of people, both New Zealanders and
-            non-New Zealanders. To finish this experience abroad, I spent two
-            weeks in Australia to discover the cities of the South-East of the
-            Island.
-            <br />These experiences abroad gave me an enormous amount, not only
-            on a personal level, but also in terms of my foreign language
-            skills.
-          </p>
+          <p class="international__paragraph">{% include international.md%}</p>
 
           <span class="section__subtitle">Where I've been</span>
           <div id="svgMap"></div>
@@ -1382,7 +1309,6 @@
     <a href="#" class="scrollup" id="scroll-up">
       <i class="uil uil-arrow-up scrollup__icon"></i>
     </a>
-
     <!-- ======================== SWIPER JS ======================== -->
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 
