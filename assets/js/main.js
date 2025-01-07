@@ -128,19 +128,18 @@ function scrollActive() {
   const scrollY = window.scrollY;
 
   sections.forEach((current) => {
-    console.log(current);
     const sectionHeight = current.offsetHeight;
     const sectionTop = current.offsetTop - 50;
     const sectionId = current.getAttribute("id");
 
+    let sectionAnchor = document.querySelector(
+      ".nav__menu a[href*=" + sectionId + "]"
+    );
+
     if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-      document
-        .querySelector(".nav__menu a[href*=" + sectionId + "]")
-        .classList.add("active-link");
+      sectionAnchor.classList.add("active-link");
     } else {
-      document
-        .querySelector(".nav__menu a[href*=" + sectionId + "]")
-        .classList.remove("active-link");
+      sectionAnchor.classList.remove("active-link");
     }
   });
 }
