@@ -7,8 +7,9 @@ document.getElementById("year").textContent =
   new Date().getFullYear() - 2001 - (now < new Date(thisYear, 4, 27) ? 1 : 0);
 
 // Compute and add year developping
-document.getElementById("years-dev").textContent = `${thisYear - 2014}+`;
-document.getElementById("years-developping").textContent = thisYear;
+[...document.querySelectorAll("#years-dev")].map(
+  (element) => (element.textContent = `${thisYear - 2014}+`)
+);
 
 // Add current year for copyright
 document.getElementById("current-year").textContent = thisYear;
