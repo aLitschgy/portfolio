@@ -1,12 +1,16 @@
 /* ======= Year Calculation =======*/
-document.getElementById("year").textContent =
-  new Date().getFullYear() -
-  2001 -
-  (new Date() < new Date(new Date().getFullYear(), 4, 27) ? 1 : 0);
+// Compute age
+const now = new Date();
+const thisYear = now.getFullYear();
 
-document.getElementById("years-dev").textContent = `${
-  new Date().getFullYear() - 2014
-}+`;
+document.getElementById("year").textContent =
+  new Date().getFullYear() - 2001 - (now < new Date(thisYear, 4, 27) ? 1 : 0);
+
+// Compute year developping
+document.getElementById("years-dev").textContent = `${thisYear - 2014}+`;
+
+// Add current year for copyright
+document.getElementById("current-year").textContent = thisYear;
 
 /* ======================= MENU SHOW Y HIDDEN ======================= */
 const navMenu = document.getElementById("nav-menu"),
