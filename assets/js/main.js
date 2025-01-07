@@ -1,13 +1,14 @@
 /* ======= Year Calculation =======*/
-// Compute age
 const now = new Date();
 const thisYear = now.getFullYear();
 
+// Compute and add age
 document.getElementById("year").textContent =
   new Date().getFullYear() - 2001 - (now < new Date(thisYear, 4, 27) ? 1 : 0);
 
-// Compute year developping
+// Compute and add year developping
 document.getElementById("years-dev").textContent = `${thisYear - 2014}+`;
+document.getElementById("years-developping").textContent = thisYear;
 
 // Add current year for copyright
 document.getElementById("current-year").textContent = thisYear;
