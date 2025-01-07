@@ -137,9 +137,9 @@ function scrollActive() {
     );
 
     if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-      sectionAnchor.classList.add("active-link");
+      sectionAnchor && sectionAnchor.classList.add("active-link");
     } else {
-      sectionAnchor.classList.remove("active-link");
+      sectionAnchor && sectionAnchor.classList.remove("active-link");
     }
   });
 }
