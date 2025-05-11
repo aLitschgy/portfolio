@@ -1,1 +1,2 @@
-Being passionate about computer science and web development, I decided to join an engineering school specializing in computer science after a "prépa". I am also a lifeguard and camp leader to occupy my vacations.
+I'm passionate about IT and web development, so I decided to enrol at ENSEEIHT after an MPSI-PSI "Prépa".
+I spend all my free time learning new skills.
