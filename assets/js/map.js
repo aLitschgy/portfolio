@@ -31,6 +31,7 @@ new svgMap({
       NZ: { visited: true, date: 2023 },
       AU: { visited: true, date: 2024 },
       US: { visited: true, date: 2024 },
+      NA: { visited: true, date: 2025 },
 
       // ...
     },
